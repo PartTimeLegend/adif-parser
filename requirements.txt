@@ -1,1 +1,1 @@
-pycountry==21.8.18
+pycountry==23.12.11
