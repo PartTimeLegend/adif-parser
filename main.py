@@ -1,10 +1,11 @@
-# main.py
-import sys
 import logging
+import sys
+
 from adif_parser import ADIFParser
 from csv_exporter import CSVExporter
 
 logging.basicConfig(level=logging.INFO)
+
 
 def main():
     if len(sys.argv) != 3:
@@ -22,10 +23,10 @@ def main():
         sys.exit(1)
 
     metrics = {
-        'Bands': parser.bands,
-        'Modes': parser.modes,
-        'Countries': parser.countries,
-        'Stations': parser.stations
+        "Bands": parser.bands,
+        "Modes": parser.modes,
+        "Countries": parser.countries,
+        "Stations": parser.stations,
     }
 
     exporter = CSVExporter()
@@ -36,6 +37,7 @@ def main():
         sys.exit(1)
 
     logging.info("Metrics exported successfully.")
+
 
 if __name__ == "__main__":
     main()

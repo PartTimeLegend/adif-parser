@@ -1,9 +1,9 @@
-# csv_exporter.py
 import csv
+
 
 class CSVExporter:
     def export_to_csv(self, metrics, filename):
-        with open(filename, 'w', newline='') as csvfile:
+        with open(filename, "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
             for metric_name, metric_data in metrics.items():
                 sorted_items = sorted(metric_data.items(), key=lambda x: x[0])
